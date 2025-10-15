@@ -1,0 +1,13 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "build and run ASM (PIE)",
+      "type": "shell",
+      "command": "nasm -f elf64 \"${file}\" -o \"${fileBasenameNoExtension}.o\" && gcc -nostdlib -pie \"${fileBasenameNoExtension}.o\" -o \"${fileBasenameNoExtension}\" && chmod +x \"${fileBasenameNoExtension}\" && ./\"${fileBasenameNoExtension}\"",
+      "group": { "kind": "build", "isDefault": true },
+      "presentation": { "reveal": "always", "panel": "shared" },
+      "problemMatcher": []
+    }
+  ]
+}
