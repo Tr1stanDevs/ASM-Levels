@@ -13,7 +13,7 @@ _start:
     sub rsp, 8                 ; stack + 0x8 negative
     mov qword [rsp], 1         ; current rsp is a 64bit value that has the value of -> 1
     call test                  ; call function
-    add rsp, 0x8                 ; Stack wieder freigeben
+    add rsp, 0x8               ; free stack
 
     mov rax, 0x3C               
     mov rdi, 0x0
